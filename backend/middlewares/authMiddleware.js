@@ -18,6 +18,7 @@ const authenticate = asyncHandler(async (req, res, next) => {
     res.status(401);
     throw new Error("Not authorized, no token");
   }
+  
 });
 
 const authorizeAdmin = (req, res, next) => {
