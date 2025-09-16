@@ -116,8 +116,11 @@ const updateCurrentUserProfile = asyncHandler(async (req, res) => {
       isAdmin: updateUser.isAdmin,
     });
 
+  } else {
+    res.status(404);
+    throw new Error("User not found");
   }
-//hfyuefyueg
+
 });
 
 
