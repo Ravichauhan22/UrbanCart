@@ -1,10 +1,20 @@
-import "./index.css";
+import {Outlet} from 'react-router-dom';
+import Navigation from './pages/Auth/Navigation';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function App() {
   return (
-  <>  <h1 className="text-3xl font-bold underline text-red-600">
-      Hello world!
-    </h1> </>)
+  <>
+      <ToastContainer />
+      <Navigation />
+      <main className="py-3">
+       <Outlet /> 
+      </main>
+
+  
+   </>)
   
 }
 
